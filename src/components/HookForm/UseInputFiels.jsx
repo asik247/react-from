@@ -1,7 +1,4 @@
 // import { useState } from "react";
-
-import { useState } from "react";
-
 // const UseInputFiels = (defaultValue)=>{
 //     const [fieldValue , setFieldValue] = useState(defaultValue);
 //     const handlFieldOnChange = (e)=>{
@@ -11,13 +8,31 @@ import { useState } from "react";
 // }
 // export default UseInputFiels;
 
+import { useState } from "react"
+
+
+// const UseInputFiels = (defaultValue)=>{
+//     const [fieldValue , setFieldValue] = useState(defaultValue);
+
+//     const handleFieldOnChange = (e)=>{
+//         setFieldValue(e.target.value);
+//     }
+//     return [fieldValue , handleFieldOnChange];
+// }
+// export default UseInputFiels;
+
+
+// Revisio Custom hook buil me...
 
 const UseInputFiels = (defaultValue)=>{
-    const [fieldValue , setFieldValue] = useState(defaultValue);
+    const [filed , setFiled] = useState(defaultValue)
+    
 
-    const handleFieldOnChange = (e)=>{
-        setFieldValue(e.target.value);
+    const handleOnChange = (e)=>{
+        setFiled(e.target.value);
     }
-    return [fieldValue , handleFieldOnChange];
+
+    return [filed , handleOnChange];
 }
+
 export default UseInputFiels;
